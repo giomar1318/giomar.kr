@@ -59,7 +59,7 @@ awardsList.insertBefore(kHeritageItem,honorableItem);
 kHeritageItem.querySelector('h4').classList.add('award-title');
 kHeritageItem.classList.add('award-record-with-media');
 kHeritageItem.insertAdjacentHTML('afterbegin','<a class="award-record-image" href="https://www.instagram.com/reel/DNs59oG5CjK/" target="_blank" rel="noopener noreferrer" aria-label="작호도를 찾아라 아차상 수상 작품 보기"><img src="assets/award-kheritage.png" alt="K-헤리티지 작호도를 찾아라 기획전 아차상 수상 작품" loading="lazy"></a>');
-grandPrizeItem.insertAdjacentHTML('beforeend','<a class="award-instagram-link" href="https://www.instagram.com/reel/Ddamk0FSo2O/" target="_blank" rel="noopener noreferrer">인스타그램에서 대상 수상작 보기 ↗</a>');
+grandPrizeItem.insertAdjacentHTML('beforeend','<a class="award-instagram-link" href="https://www.instagram.com/reel/Ddamk0FSo2O/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">인스타그램에서 대상 수상작 보기 ↗</a>');
 excellenceItem.insertAdjacentHTML('beforeend','<a class="award-instagram-link" href="https://www.instagram.com/reel/DQo6nA-EmX7/" target="_blank" rel="noopener noreferrer">인스타그램에서 우수상 수상작 보기 ↗</a>');
 const ictAwardItem=[...awardsList.children].find(item=>item.textContent.includes('ICT정보문화페스티벌'));
 ictAwardItem.classList.add('award-record-with-media');
