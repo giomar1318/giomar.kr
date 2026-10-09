@@ -95,12 +95,13 @@ goldenAwardFilm.querySelector('span').textContent='GIOMAR · Cinematic Gold';
 goldenAwardFilm.querySelector('small').textContent='18초 · 시네마틱 영상';
 const parkoneSelectedFilm=document.querySelector('.motion-choice[data-film="breath-resonance"]');
 parkoneSelectedFilm.dataset.film='parkone-media-art';
-parkoneSelectedFilm.dataset.poster='parkone-guardian-frame.jpg';
+parkoneSelectedFilm.dataset.video='parkone-media-art.mp4?v=20261009';
+parkoneSelectedFilm.dataset.poster='parkone-media-art-poster.png';
 parkoneSelectedFilm.dataset.title='여의도 파크원 미디어아트';
 parkoneSelectedFilm.dataset.description='여의도 파크원 미디어아트 전시작가 선정 · 2026년 5월부터 대형 미디어월에서 작품 영상 송출';
-parkoneSelectedFilm.querySelector('img').src='assets/parkone-guardian-frame.jpg';
+parkoneSelectedFilm.querySelector('img').src='assets/parkone-media-art-poster.png';
 parkoneSelectedFilm.querySelector('span').textContent='여의도 파크원 미디어아트';
-parkoneSelectedFilm.querySelector('small').textContent='현장 영상 · 전시작가 선정';
+parkoneSelectedFilm.querySelector('small').textContent='20초 · AI 미디어아트';
 
 const routeGroups={
   home:['.hero','.quick-links'],
@@ -253,7 +254,7 @@ for(const key of ['youtube','blog']){const url=safeURL(config[key]);if(url){cons
 if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.06});document.querySelectorAll('.section-head,.artwork,.create-grid article').forEach(el=>{el.classList.add('reveal');observer.observe(el)})}
 
 const motionPlayer=document.querySelector('#motion-player');
-document.querySelectorAll('.motion-choice').forEach(button=>button.addEventListener('click',()=>{if(button.getAttribute('aria-pressed')==='true')return;motionPlayer.pause();const d=button.dataset;motionPlayer.poster=`assets/${d.poster||`${d.film}-poster.webp`}`;motionPlayer.querySelector('source').src=`assets/${d.film}.mp4`;motionPlayer.setAttribute('aria-label',d.title);motionPlayer.load();document.querySelector('#motion-title').textContent=d.title;document.querySelector('#motion-copy').textContent=d.description;document.querySelectorAll('.motion-choice').forEach(b=>b.setAttribute('aria-pressed',String(b===button)))}));
+document.querySelectorAll('.motion-choice').forEach(button=>button.addEventListener('click',()=>{if(button.getAttribute('aria-pressed')==='true')return;motionPlayer.pause();const d=button.dataset;motionPlayer.poster=`assets/${d.poster||`${d.film}-poster.webp`}`;motionPlayer.querySelector('source').src=`assets/${d.video||`${d.film}.mp4`}`;motionPlayer.setAttribute('aria-label',d.title);motionPlayer.load();document.querySelector('#motion-title').textContent=d.title;document.querySelector('#motion-copy').textContent=d.description;document.querySelectorAll('.motion-choice').forEach(b=>b.setAttribute('aria-pressed',String(b===button)))}));
 document.querySelector('.archive-works')?.addEventListener('toggle',e=>{if(e.currentTarget.open)e.currentTarget.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'))});
 
 
