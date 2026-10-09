@@ -97,11 +97,11 @@ const parkoneSelectedFilm=document.querySelector('.motion-choice[data-film="brea
 parkoneSelectedFilm.dataset.film='parkone-media-art';
 parkoneSelectedFilm.dataset.video='parkone-media-art.mp4?v=20261009';
 parkoneSelectedFilm.dataset.poster='parkone-media-art-poster.png';
-parkoneSelectedFilm.dataset.title='여의도 파크원 미디어아트';
-parkoneSelectedFilm.dataset.description='여의도 파크원 미디어아트 전시작가 선정 · 2026년 5월부터 대형 미디어월에서 작품 영상 송출';
+parkoneSelectedFilm.dataset.title='《꽃이 피는 순간, 운명이 바뀌었다》';
+parkoneSelectedFilm.dataset.description='AI Cinematic Short Film';
 parkoneSelectedFilm.querySelector('img').src='assets/parkone-media-art-poster.png';
-parkoneSelectedFilm.querySelector('span').textContent='여의도 파크원 미디어아트';
-parkoneSelectedFilm.querySelector('small').textContent='20초 · AI 미디어아트';
+parkoneSelectedFilm.querySelector('span').textContent='《꽃이 피는 순간, 운명이 바뀌었다》';
+parkoneSelectedFilm.querySelector('small').textContent='AI Cinematic Short Film';
 
 const routeGroups={
   home:['.hero','.quick-links'],
